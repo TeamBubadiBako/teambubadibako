@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>For My Luv ❤︎</title>
+        <link rel="stylesheet" href="./index.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    </head>
+    <body>
+        <div class="bg">
+            <h3>Haii Bebeb, Mas Mau Nanya Sesuatu Nihh Sama Bby, Bby Jawab Yang Bener Yaa. Awas Aja Jawab Nya Main"</h3>
+            <button id="uw">Pencet Ini </button>
+        </div>
+        <script>
+        (async () => {
+
+            const uw = document.querySelector('#uw');
+            uw.addEventListener('click',function(){
+                Swal.fire({
+                    title: 'Bby Sayang Ngga Sama Mas??',
+                    showDenyButton: true,
+                    confirmButtonText: `Sayang Banget`,
+                    denyButtonText: `Enggak`,
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire('Aaaaaa Mas Jga Sayang Banget Ma Bby').then((result) => {
+                            if (result.isConfirmed) {
+                                (async () => {
+
+                                const {value: au} = await swal.fire({
+                                    title: 'Seberapa Sayang Cbak Bby Sma Mas?',
+                                    input: 'range',
+                                    inputAttributes: {
+                                        min: 0,
+                                        max: 100,
+                                    },
+                                    inputValue: 0,
+                                    inputValidator: (value) => {
+                                        return new Promise((resolve) => {
+                                            if (value === '100') {
+                                                resolve()
+                                            } else {
+                                                resolve('Ishh Munyakk.. Gabole Kurang Dari 100 Sayang.. Pkonya Bby Harus 100% Sayang Sma Mas')
+                                            }
+                                        })
+                                    }
+                                })
+                                if (au) {
+                                    swal.fire('Aaaa Makasiii Udah ' + au + '% Sayang Ma Mas Huhu.. Terhura Deh Mas Juga Sayang Banget Sma Bby.. Gamau Bby Sampek Brubah Pokok Nya Jangan Sampek')
+                                    .then((result) => {
+                                        if (result.isConfirmed) {
+                                            Swal.fire({
+                                            title: 'Eumm Mas Mo Nanyak Satuk Lagi Nik.. Bole Nggak',
+                                            showDenyButton: true,
+                                            confirmButtonText: `Bole`,
+                                            denyButtonText: 'Nggak Bole',
+                                            })
+                                            .then((result) => {
+                                                if (result.isConfirmed) {
+                                                    Swal.fire({
+                                                        title: 'Bby Pernah Bosan Ngk Sama Mas?',
+                                                        showDenyButton: true,
+                                                        confirmButtonText: `Enggak Dong`,
+                                                        denyButtonText: 'Pernah',
+                                                        }).then((result) => {
+                                                        if (result.isConfirmed) {
+                                                            Swal.fire('Huaaaa Makaci Bbyh Jangan Pernah Bosan Sma Mas Yaa.. Makaci Dah Mau Nemenin Mas Dri Dlu Sampek Sekarang.. Makaci Dah Slalu Sabar Sma Mas Slalu Warnai Hari" Mas.. Maaf Yaa Klo Kadang Mas Bikin Masalah.. Bikin Bby Nangiss.. Maaf Banget Cayank Ehe.. Ttp Kayak Gini Yaa.. Jangan Pernah Berubahh.. I Love You So Much Bby.. Umwahh') 
+                                                                .then((result) => {
+                                                                    if (result.isConfirmed) {
+                                                                        Swal.fire('Happy 1 Year 1 Month Ya Sayang Umwahh Ingatt Yaa.. Jangan Brubahh Ehe ❤️') 
+                                                                    }
+                                                                })
+                                                        }
+                                                        else if (result.isDenied) {
+                                                            Swal.fire('Yahh Jangan Bosan" Dong Sama Mass.. Ntr Mas Nangis Nihh')
+                                                        }
+                                                    }) 
+                                                }
+                                                else if (result.isDenied) {
+                                                    Swal.fire('Dahla Males.. Gamau Sayang Lagik')
+                                                }
+                                            })
+                                        }
+                                    })
+                                }
+                                })()
+                            }
+                        })
+                    }
+                    else if (result.isDenied) {
+                        Swal.fire('Tuh Kann.. Main Main Jawab Nyaa')
+                    }
+                })
+            });
+        })()
+        </script>
+    </body>
+</html>
